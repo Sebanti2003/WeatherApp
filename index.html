@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="./weather-app.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="index.js" type="module" defer></script>
+    <title>Weather App</title>
+    <style>
+        @media (max-width:420px) {
+            .holy{
+                width: 90vw;
+            }
+            .city{
+                width: 70%;
+            }
+            .submit{
+                width:10vw;
+                height: 10vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper bg-slate-800 h-screen w-screen flex justify-center items-center overflow-hidden">
+        <div class="container  h-fit w-[27vw] holy bg-slate-50 bg-gradient-to-br from-cyan-500 to-green-300 rounded-2xl p-5 flex flex-col gap-6">
+            <div class="searchsection flex justify-between items-center  h-10">
+                <input type="text" placeholder="Enter city name" spellcheck="false" class="city w-[18vw] rounded-2xl p-4 h-[2.8vw] bg-slate-200 text-black border-1 border-white">
+                <button class="w-[2.8vw] h-[2.8vw] bg-slate-100  p-1 rounded-full submit "><i class="ri-search-line"></i></button>
+            </div>
+            <div class="main flex flex-col items-center justify-evenly gap-1">
+                <img src="./—Pngtree—cartoon sun rain icon download_4441277.png" alt="" class="h-36 w-36">
+                <h1 class="text-white font-sans text-5xl"><span class="degree"></span>&deg;C</h1>
+                <h2 class="cityspace text-white font-sans text-3xl">New York</h2>
+            </div>
+            <div class="mt-5 h-20  flex flex-row justify-between px-1 gap-2">
+                <div class="h-full w-[45%] overflow-hidden flex flex-row">
+                    <img src="./download-removebg-preview (1).png" alt="" class="w-[50%] h-fit">
+                    <div class="w-[50%] flex flex-col items-center justify-center gap-2">
+                        <div class=" text-white font-mono text-2xl"><span class="humidity"></span>%</div>
+                        <div class="text-white">Humidity</div>
+                    </div>
+                </div>
+                <div class="h-full w-[55%]  overflow-hidden flex flex-row">
+                    <img src="./download-removebg-preview.png" alt="" class="w-[40%] h-full">
+                    <div class="w-[60%] flex flex-col items-center justify-center">
+                        <div class="text-white font-mono text-2xl w-full "><span class="wind"></span>Km/hr</div>
+                        <div class="text-white w-full text-center">Wind Speed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
